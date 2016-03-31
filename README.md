@@ -4,13 +4,21 @@ Major for web develop
 
 ## Install
 
-### 1. Clone this repo
+### 1. install independycies
+
+Example for Ubuntu 14.04 LTS
+
+```shell
+sudo apt-get install gcc g++ cmake python-dev python3-dev
+```
+
+### 2. Clone this repo
 
 ```shell
 git clone https://github.com/sallen450/myvim.git
 ```
 
-### 2. Execute init shell
+### 3. Execute init shell
 
 ```
 cd myvim && chmod +x init.sh && ./init.sh

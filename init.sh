@@ -20,6 +20,10 @@ cp .vimrc ~/.vimrc
 # install vim plugins
 vim +PluginInstall +qall
 
+# compile YouCompleteMe
+cd ~/.vim/bundle/YouCompleteMe
+./install.py --clang-completer
+
 # delete the repo when install finished
 cd ..
 
