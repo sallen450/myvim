@@ -4,7 +4,7 @@ Major for web develop
 
 ## Install
 
-### 1. install independycies
+### 1. install dependencies
 
 Example for Ubuntu 14.04 LTS
 
@@ -24,3 +24,6 @@ git clone https://github.com/sallen450/myvim.git
 cd myvim && chmod +x init.sh && ./init.sh
 ```
 
+## TODO
+
+- install var curl and pipe
