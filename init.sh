@@ -1,15 +1,28 @@
 #!/bin/bash
 
+# .vim
+if [ -d ~/.vim ]; then
+	mv ~/.vim ~/.vim.orig
+fi
+
+mkdir ~/.vim
+
+# install Vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
 # .vimrc
 if [ -f ~/.vimrc ]; then
-	mv ~/.vimrc ~/.vimrc.bak
+	mv ~/.vimrc ~/.vimrc.orig
 fi
 
 cp .vimrc ~/.vimrc
 
-# .vim
-if [ -d ~/.vim ]; then
-	mv ~/.vim ~/.vim_back
-fi
+# install vim plugins
+vim +PluginInstall +qall
 
-mkdir ~/.vim
+# delete the repo when install finished
+cd ..
+
+if [ -d ./myvim ]; then
+	rm -rf ./myvim
+fi
