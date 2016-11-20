@@ -10,8 +10,7 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
+Plugin 'bling/vim-airline'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -20,8 +19,13 @@ Plugin 'Xuyuanp/nerdtree-git-plugin'
 "Plugin 'Yggdroot/indentLine'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'marijnh/tern_for_vim'
-Plugin 'mxw/vim-jsx'
+Plugin 'posva/vim-vue'
+"Plugin 'mxw/vim-jsx'
 Plugin 'terryma/vim-multiple-cursors'
+Plugin 'scrooloose/syntastic'
+Plugin 'mtscout6/syntastic-local-eslint.vim'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()
 filetype plugin indent on
@@ -52,7 +56,8 @@ set scrolloff=7			"在上下移动光标时，光标的上方或下方至少会�
 "let g:vim_json_syntax_conceal=0
 "let g:indentLine_noConcealCursor=""
 
-
+set list
+set listchars=tab:>\ ,trail:·
 
 nnoremap <C-t>     :tabnew<CR>			"新建tab  Ctrl+t
 inoremap <C-t>     <Esc>:tabnew<CR>		"新建tab  Ctrl+t
@@ -69,6 +74,13 @@ nnoremap <C-H> <C-W><C-H>	"切换到左方窗口
 
 nnoremap <space> zz			"当前行屏幕窗口居中
 
+" ****************************
+"	Insert mode move keymap
+" ****************************
+imap <C-h> <C-o>h
+imap <C-j> <C-o>j
+imap <C-k> <C-o>k
+imap <C-l> <C-o>l
 
 " ****************************
 "	NERDTree Config
@@ -125,3 +137,9 @@ let g:NERDTreeIndicatorMapCustom = {
 "	Jsx Config
 " ****************************
 let g:jsx_ext_required = 0
+
+
+" ****************************
+"	Eslint Config
+" ****************************
+let g:syntastic_javascript_checkers = ['eslint']
