@@ -59,6 +59,8 @@ set scrolloff=7			"在上下移动光标时，光标的上方或下方至少会�
 set list
 set listchars=tab:>\ ,trail:·
 
+set shell=/bin/zsh
+
 nnoremap <C-t>     :tabnew<CR>			"新建tab  Ctrl+t
 inoremap <C-t>     <Esc>:tabnew<CR>		"新建tab  Ctrl+t
 
