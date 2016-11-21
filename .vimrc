@@ -43,6 +43,7 @@ set laststatus=2		"总是显示状态栏
 set shiftwidth=4		"缩进空格数
 set tabstop=4			"制表符宽度
 set softtabstop=4		"删除制表符的空格数
+set expandtab			"点击 tab 的时候，插入 4 个空格
 set helplang=cn			"帮助为中文
 set nu					"行号
 set backspace=2			"解决mac下删除的问题
