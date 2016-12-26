@@ -10,7 +10,8 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ctrlpvim/ctrlp.vim'
@@ -24,8 +25,11 @@ Plugin 'posva/vim-vue'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/syntastic'
 Plugin 'mtscout6/syntastic-local-eslint.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
+"Plugin 'godlygeek/tabular'
+"Plugin 'plasticboy/vim-markdown'
+Plugin 'qpkorr/vim-bufkill'
+"Plugin 'zefei/vim-wintabs'
+Plugin 'iamcco/markdown-preview.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -146,3 +150,9 @@ let g:jsx_ext_required = 0
 "	Eslint Config
 " ****************************
 let g:syntastic_javascript_checkers = ['eslint']
+
+" ****************************
+"	Markdown preview Config
+" ****************************
+let g:mkdp_path_to_chrome = "open -a Google\\ Chrome"
+
