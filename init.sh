@@ -20,6 +20,10 @@ cp .vimrc ~/.vimrc
 # install vim plugins
 vim +PluginInstall +qall
 
+# init tern
+cd ~/.vim/bundle/tern_for_vim
+npm install
+
 # compile YouCompleteMe
 cd ~/.vim/bundle/YouCompleteMe
 ./install.py --clang-completer
